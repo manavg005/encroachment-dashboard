@@ -29,26 +29,36 @@
         <div class="left">
         <label for="districts">District</label>
         <select name="districts" id="districts" required>
-          <option value="Jammu">Jammu</option>
-          <option value="samba">Samba</option>
-          <option value="kathua">Kathua</option>
-          <option value="reasi">Reasi</option>
+            <option value="">Select a District</option>
+            <option value="jammu">Jammu</option>
+            
         </select>
         </div>
         <label for="tehsils">Tehsil</label>
         <select name="tehsils" id="tehsils" required>
-          <option value="bahu">Bahu</option>
-          <option value="jammu">Jammu</option>
-          <option value="jammu_north">Jammu North</option>
-          <option value="jammu_south">Jammu South</option>
+            <option value="">Select a Tehsil</option>
+            <option value="bahu">Bahu</option>
+            <option value="jammu">Jammu</option>
+            <option value="jammu_north">Jammu North</option>
+            <option value="jammu_south">Jammu South</option>
         </select><br>
-            <label for="Enc">Encroachment Captured</label>
+             <label for="nayabat">Nayabat:</label>
+            <input type="text" id="name" name="area" required >
+            <label for="gq">G.Q.Circle:</label>
+            <input type="text" id="name" name="area" required>
+            <label for="patwar">Patwar Halqa:</label>
+            <input type="text" id="name" name="area" required>
+            <label for="village">Village:</label>
+            <input type="text" id="name" name="area" required>
+            <label for="ror">Records of Rights(Jamabandi):</label>
+            <input type="text" id="name" name="ror" required>
+            <label for="survey">Survey Number(Khasra):</label>
+            <input type="text" id="name" name="area" required>
+            <label for="Enc">Encroachment Captured:</label>
             <input type="number" id="enc" name="enc" placeholder="in sqft" required>
             <label for="Enc">Latitude and Longitude:</label>
             <input type="text" id="latlong" name="latlong" placeholder="32.690339, 74.887375" required><br>
-            <label for="Enc">Area</label>
-            <input type="text" id="name" name="area" >
-            <label for="name">Officer</label>
+            <label for="name">Officer Name:</label>
             <input type="text" id="area" name="area" ><br>
             <input type="submit" value="Submit"><br>
             <input type="reset">

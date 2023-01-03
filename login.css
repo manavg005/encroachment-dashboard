@@ -3,6 +3,15 @@
     padding:0px;
     box-sizing:border-box;
   }
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+  
   body {
     font-family:"Roboto",sans-serif;
     background:#f5f5f5;
@@ -108,8 +117,14 @@
     line-height: 60px;
     background-color: #f5f5f5;
   }
-
-  .topnav {
+  .navbar_dark{
+    padding-top: 20px;
+  }
+  
+  .navbar_dark{
+    margin-top:2% ;
+  }
+  nav{
     overflow: hidden;
     background-color: #333;
   }
@@ -117,7 +132,6 @@
   .topnav a {
     float: left;
     color: #f2f2f2;
-    text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
@@ -137,24 +151,25 @@
     float:right
 
   }
-  .navbar-dark{
-    margin-top:4%
-
-  }
-
+  .jk{
+    margin-bottom: 60px;
+  } 
+   
   .jk h1{
     padding-left:30%;
     font-size: 40px;
     font-family:"Kingthings Foundation";
     margin-top:2%;
-  
   }
+  
   .jk img{
     
-    position: fixed;
-    top:0;
-    left:0;
+    position: absolute;
+    top:8px;
+    left:16px;
     
+    /* top: 1px; */
+  
   }
   form{
     background-color: #f2f2f2;
