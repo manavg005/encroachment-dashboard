@@ -14,11 +14,11 @@
   
   body {
     font-family:"Roboto",sans-serif;
-    background:#f5f5f5;
+    background:lavender;
   }
   .login-form {
     position:absolute;
-    top:50%;
+    top:55%;
     left:50%;
     transform:translate(-50%,-50%);
     width:90%;
@@ -96,7 +96,7 @@
     color:#fff;
     cursor:pointer;
   }
-  .login-form #reset-btn {
+  .login-form #signup-btn {
     margin-top:5px;
     width:100%;
     padding:10px;
@@ -160,6 +160,7 @@
     font-size: 40px;
     font-family:"Kingthings Foundation";
     margin-top:2%;
+
   }
   
   .jk img{
@@ -170,6 +171,12 @@
     
     /* top: 1px; */
   
+  }
+  .logo img{
+    position: absolute;
+    top:8px;
+    right:16px;
+    
   }
   form{
     background-color: #f2f2f2;
