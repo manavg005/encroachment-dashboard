@@ -4,35 +4,37 @@
   box-sizing: border-box;
 }
 ::-webkit-scrollbar {
-  width: 0;
-  height: 0;
+  width: 4px;;
+  height: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: transparent;
+  background:purple;
 }
 
 body {
   font-family: "Roboto", sans-serif;
-  background: lightgrey;
+  background-color: lightgrey;
 }
 .login-form {
   position: absolute;
-  top: 55%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
   max-width: 450px;
   background: #fff;
-  padding: 20px 30px;
+  padding: 8px 18px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
+
+
 .login-form .form-title {
   font-family: "Montserrat", sans-serif;
   text-align: center;
   font-size: 30px;
   font-weight: 600;
-  margin: 20px 0px 30px;
+  margin: 18px 5px 30px;
   color: #111;
 }
 .login-form .form-input {
@@ -45,7 +47,13 @@ body {
   color: #111;
   margin-bottom: 5px;
 }
-.login-form .form-input input {
+.login-form .form-input input{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #888;
+  font-size: 15px;
+}
+.login-form .form-input select{
   width: 100%;
   padding: 10px;
   border: 1px solid #888;
@@ -173,11 +181,11 @@ nav {
   top: 8px;
   right: 16px;
 }
-form {
+/*form {
   background-color: #f2f2f2;
   padding: 10px;
   text-align: center;
-}
+}*/
 
 input[type="text"],
 select {
@@ -214,7 +222,7 @@ input[type="submit"]:hover {
   background-color: #45a049;
 }
 
-input[type="reset"] {
+input[type="register"] {
   width: 20%;
   background-color: #4caf50;
   color: white;
@@ -225,7 +233,21 @@ input[type="reset"] {
   cursor: pointer;
 }
 
-input[type="reset"]:hover {
+input[type="register"]:hover {
+  background-color: #45a049;
+}
+input[type="Reset"] {
+  width: 20%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="Reset"]:hover {
   background-color: #45a049;
 }
 
@@ -285,7 +307,7 @@ input[type="reset"]:hover {
 #sub-form {
   background-color: rgb(249, 243, 243);
   border: 6px solid rgb(21, 21, 21);
-  margin: 8px 10px 8px 10px;
+  margin: 8px 10px 10px 10px;
 }
 .some-page-wrapper {
   margin: 30px 0px 0px 0px;
