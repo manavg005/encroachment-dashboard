@@ -1,94 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>J&k Administration</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="login.css" />
 </head>
+
 <body>
     <div class="jk">
         <h1>Jammu & Kashmir Revenue Department</h1>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Government_of_Jammu_and_Kashmir.svg/640px-Government_of_Jammu_and_Kashmir.svg.png" alt="logo" width="128" height="120">
-        
-    </div> 
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Government_of_Jammu_and_Kashmir.svg/640px-Government_of_Jammu_and_Kashmir.svg.png"
+            alt="logo" width="128" height="120" />
+    </div>
     <div class="logo">
-
-        <img src="https://jakega.jk.gov.in/images/ofiice/Logo.png">
-    </div> 
+        <img src="https://jakega.jk.gov.in/images/ofiice/Logo.png" />
+    </div>
     <div>
         <nav class="navbar-dark">
             <div class="container">
                 <div class="topnav" id="navbar">
-                        <a class="active" aria-current="page" href="page.html">Dashboard</a>
-                        <a href="input.html">Inspection Details</a>
-                        <a href="login.html"  class="right">Logout</a>  
+                    <a class="active" aria-current="page" href="page.html">Dashboard</a>
+                    <a href="input.html">Inspection Details</a>
+                    <a href="login.html" class="right">Logout</a>
                 </div>
             </div>
         </nav>
     </div>
-    
-    <div class="form">
-        <form>
-        <div>
-            <h3>Details of Land</h3>
+
+    <div id="inspection-form">
+        <div id="sub-form">
+            <form>
+                <div>
+                    <h2>Details of Land</h2>
+                </div>
+
+                <div class="some-page-wrapper">
+
+                    <div class="row">
+
+                        <div class="column" id="tehsils">
+                            <div class="child-column">
+                                <div class="form-group">
+                                    <label for="districts">District</label>
+                                    <select name="districts" id="districts" required>
+                                        <option value="">Select a District</option>
+                                        <option value="jammu">Jammu</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column" id="tehsils">
+                            <div class="child-column">
+                                <div class="form-group">
+                                    <label for="tehsils">Tehsil</label>
+                                    <select name="tehsils" id="tehsils" required>
+                                        <option value="">Select a Tehsil</option>
+                                        <option value="bahu">Bahu</option>
+                                        <option value="jammu">Jammu</option>
+                                        <option value="jammu_north">Jammu North</option>
+                                        <option value="jammu_south">Jammu South</option>
+                                    </select><br />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column" id="patwar">
+                            <div class="child-column">
+                                <div class="form-group">
+                                    <label for="patwar">Patwar Halqa:</label>
+                                    <input type="text" id="name" name="area" required />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="column" id="land">
+                            <div class="child-column">
+                                <div class="form-group">
+                                    <label for="land">Type of Land</label>
+                                    <select name="land" id="land" required>
+                                        <option value="">Select Land Type</option>
+                                        <option value="state">State</option>
+                                        <option value="khc">Khacharie</option>
+                                    </select><br />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column" id="recovered">
+                            <div class="child-column">
+                                <div class="form-group">
+                                    <label for="recovered">Quantum of Land Recovered:</label>
+                                    <input type="text" id="land" name="area" required />
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="column" id="lat-long">
+                            <div class="child-column">
+                                <div class="form-group">
+                                    <label for="Enc">Latitude and Longitude:</label>
+                                    <input type="text" id="latlong" name="latlong" placeholder="32.690339, 74.887375"
+                                        required /><br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column">
+                            <div class="child-column">
+                                <div class="form-group">
+                                    <label for="name">Comments</label>
+                                    <input type="text" id="area" name="area" /><br />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="child-column">
+                                <div class="form-group">
+                                    <label for="exampleInputFile">Upload an Image</label>
+                                    <input type="file" class="form-control-file" id="exampleInputFile"
+                                        accept="image/*" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="child-column">
+                                <div class="form-group">
+                                    <label for="exampleInputFile">Upload a Video</label>
+                                    <input type="file" class="form-control-file" id="exampleInputFile"
+                                        accept="video/*" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btns">
+                    <input type="submit" value="Submit" class="btn"/><br />
+                    <input type="reset" class="btn" />
+                </div>
         </div>
-        <div class="left">
-        <label for="districts">District</label>
-        <select name="districts" id="districts" required>
-            <option value="">Select a District</option>
-            <option value="jammu">Jammu</option>
-            
-        </select>
-        </div>
-        <label for="tehsils">Tehsil</label>
-        <select name="tehsils" id="tehsils" required>
-            <option value="">Select a Tehsil</option>
-            <option value="bahu">Bahu</option>
-            <option value="jammu">Jammu</option>
-            <option value="jammu_north">Jammu North</option>
-            <option value="jammu_south">Jammu South</option>
-        </select><br>
-
-            <label for="patwar">Patwar Halqa:</label>
-            <input type="text" id="name" name="area" required>
-            
-            
-            <label for="land">Type of Land</label>
-            <select name="land" id="land" required>
-                <option value="">Select Land Type</option>
-                <option value="state">State</option>
-                <option value="khc">Khacharie</option>
-                
-            </select><br>
-
-            <label for="recovered">Quantum of Land Recovered:</label>
-            <input type="text" id="land" name="area" required>
-            
-            <label for="Enc">Latitude and Longitude:</label>
-            <input type="text" id="latlong" name="latlong" placeholder="32.690339, 74.887375" required><br>
-            <!--<label for="img">Land Images</label>
-            <select>
-                <option value="">Select the format of image</option>
-                <option value="png">PNG</option>
-                <option value="jpeg">JPEG</option>
-            </select>
-
-            <label for="video">Land Videos</label>
-            <select>
-                <option value="">Select the format of  video</option>
-                <option value="mp4">MP4</option>
-                <option value="mov">MOV</option>
-                <option value="Mkv">MKV</option>
-            </select>-->
-            <label for="name">Comments</label>
-            <input type="text" id="area" name="area" ><br>
-
-            <input type="submit" value="Submit"><br>
-            <input type="reset">
-
-          </form> 
+    </div>
+    </form>
     </div>
 </body>
+
 </html>
