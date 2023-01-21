@@ -14,7 +14,7 @@
   
   body {
     font-family:"Roboto",sans-serif;
-    background:lavender;
+    background:lightgrey;
   }
   .login-form {
     position:absolute;
@@ -182,9 +182,11 @@
     background-color: #f2f2f2;
     padding: 10px;
     text-align: center;
-  
+     
   
   }
+  
+
 
   input[type=text], select {
     width: 20%;
@@ -237,6 +239,63 @@
     background-color: #45a049;
   }
   
-  label{
-    display: block;
-  }
+  
+.form-group2{
+  box-sizing: border-box;
+  float: right;
+  
+
+}
+.headers{
+  margin-top: 5px;
+}
+.headers p{
+display: inline;
+padding-left: 13%;
+color: #b44020;
+
+
+font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.num p{
+display: inline;
+padding-left: 12%;
+padding-right: 7.5%;
+color: #b44020;
+font-size: 17px;
+font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.left{
+  float:left;
+  margin-bottom: 0%;
+  margin-top: 3.5%;
+  padding-left: 3%;
+}
+.left p{
+
+margin-top: 8%;
+color: #b44020;
+font-size: 1.2rem;
+font-family:Georgia, 'Times New Roman', Times, serif;
+  
+  
+}
+.Gimage{
+  margin-top: 2%;
+  text-align: center;
+  padding-left: 20%;
+
+}
+.Gpie {
+  float: right;
+  margin-top:3.5%;
+  margin-right:2%;
+}
+
+.Gpie p{
+  padding-top: 5%;
+  padding-left: 15%;
+  color: #b44020;
+font-size: 1.1rem;
+font-family:Georgia, 'Times New Roman', Times, serif;
+}
