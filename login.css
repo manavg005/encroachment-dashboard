@@ -14,12 +14,51 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   background-color: lightgrey;
 }
+
+#footer{
+  margin-top: 30%;
+  font-family:Georgia, "Times New Roman", Times, serif;
+  background-color: lightgrey;
+}
+
+.footer-bottom-wrapper{
+	box-sizing: border-box;
+	text-align:center!important;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  font-family:Georgia, "Times New Roman", Times, serif;
+  background-color: #213244;
+  color: #ffffff;
+  padding: 8px;
+ 
+}
+.footer-content a{
+  color: #a3d2f9;
+
+}
+.slides{
+  
+  background-color:grey;
+  margin-top: 37%;
+  display: flex;
+  
+  
+  
+  
+ 
+}
+.slides li{
+list-style-type: none;
+padding: 70px;
+}
+
+
 .login-form {
   position: absolute;
-  top: 60%;
+  top: 67%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
@@ -31,7 +70,7 @@ body {
 
 
 .login-form .form-title {
-  font-family: "Montserrat", sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   text-align: center;
   font-size: 30px;
   font-weight: 600;
@@ -118,15 +157,7 @@ body {
   cursor: pointer;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  line-height: 60px;
-  background-color: #f5f5f5;
-}
-.navbar_dark {
+/*.navbar_dark {
   padding-top: 20px;
 }
 
@@ -159,28 +190,37 @@ nav {
 .topnav a.right {
   float: right;
 }
+
 .jk {
   margin-bottom: 60px;
 }
 
-.jk h1 {
+/*.jk h1 {
   padding-left: 30%;
   font-size: 40px;
-  font-family: "Kingthings Foundation";
-  margin-top: 2%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  top: 15px;
+  
+}*/
+.jk p{
+  font-family: Georgia, "Times New Roman", Times, serif;
+    text-align: center;
+    font-size: 35px;
+    margin-top:3%;
 }
 
-.jk img {
+/*.jk img {
   position: absolute;
-  top: 8px;
+  margin-top: 3%;
   left: 16px;
 
-  /* top: 1px; */
-}
+}*/
 .logo img {
   position: absolute;
-  top: 8px;
-  right: 16px;
+  margin-top: 0.5%;
+  left: 16%;
+  
+  
 }
 /*form {
   background-color: #f2f2f2;
@@ -310,10 +350,22 @@ input[type="Reset"]:hover {
   border: 6px solid rgb(21, 21, 21);
   margin: 8px 10px 10px 10px;
 }
+
 .some-page-wrapper {
-  margin: 30px 0px 0px 0px;
+  margin: 30px 5px 5px 5px;
 }
+.form-group select, option{
+  width:200px;
+}
+.form-group input[type=text]
+
+{
+  width:200px;
+}
+
 .row {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -322,6 +374,8 @@ input[type="Reset"]:hover {
 }
 
 .column {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 18px;
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
@@ -343,7 +397,45 @@ input[type="Reset"]:hover {
 }
 .btns {
   text-align: center;
+  
 }
 .btn {
-  font-size: 15px;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.topbar {
+  padding: 8px 0;
+  background-color: #162E57;
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+.topbar ul {
+  float: right;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+}
+.topbar li {
+  display: inline;
+  margin: 0 8px 0 0;
+  padding: 0 10px 0 0;
+  border-right: 1px solid #999999;
+  
+}
+.topbar a{
+  color: #FFFFFF;
+  text-decoration: none;
+  
+}
+.topbar2{
+  margin-top:3%;
+  padding: 16px 0;
+  background-color: #162E57;
+  display: block;
+  position: relative;
+  width: 100%;
+
 }
