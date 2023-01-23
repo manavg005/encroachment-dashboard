@@ -67,9 +67,20 @@ padding: 70px;
   padding: 8px 18px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
+.signup-form{
+  position: absolute;
+  top: 77%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 450px;
+  background: #fff;
+  padding: 8px 18px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
 
-
-.login-form .form-title {
+.login-form .form-title ,
+.signup-form .form-title{
   font-family: Georgia, "Times New Roman", Times, serif;
   text-align: center;
   font-size: 30px;
@@ -77,23 +88,28 @@ padding: 70px;
   margin: 18px 5px 30px;
   color: #111;
 }
-.login-form .form-input {
+.login-form .form-input ,
+.signup-form .form-input{
   margin: 10px 0px;
 }
 .login-form .form-input label,
-.login-form .captcha label {
+.login-form .captcha label ,
+.signup-form .form-input label,
+.signup-form .captcha label{
   display: block;
   font-size: 15px;
   color: #111;
   margin-bottom: 5px;
 }
-.login-form .form-input input{
+.login-form .form-input input,
+.signup-form .form-input input{
   width: 100%;
   padding: 10px;
   border: 1px solid #888;
   font-size: 15px;
 }
-.login-form .form-input select{
+.login-form .form-input select,
+.signup-form .form-input select{
   width: 100%;
   padding: 10px;
   border: 1px solid #888;
@@ -132,7 +148,8 @@ padding: 70px;
   color: #eee;
   cursor: pointer;
 }
-.login-form #login-btn {
+.login-form #login-btn ,
+.signup-form #login-btn {
   margin-top: 5px;
   width: 100%;
   padding: 10px;
