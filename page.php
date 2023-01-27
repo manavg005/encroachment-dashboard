@@ -1,3 +1,13 @@
+<?php
+include 'connection.php';
+session_start();
+
+if(!isset($_SESSION['username'])){
+   header('location:login.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>J&k Administration</title>
     <link rel="stylesheet" href="page.css">
-
+    <script src="https://d3js.org/d3.v7.min.js"></script> 
 </head>
 
 
@@ -19,7 +29,7 @@
               <a href="login.html">Home</a>
             </li>
             <li class="last">
-                <a href="ContactUs.aspx">Contact Us</a>
+                <a href="#">Contact Us</a>
             </li>
         </ul>
         <br class="clear">
@@ -74,14 +84,44 @@
 </div>
 <div class="left">
     <img src="images/photograph.png" alt="photo" width="180px" height="180px">
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name</p>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Role</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $_SESSION['username'] ?></p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $_SESSION['usertype'] ?></p>
     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Designation</p>
 </div>  
 
-<div class="Gimage">
-    
-    <img src="images/graph.jpeg" alt="Graph" width="720" height="380">
+<div class="d3image">
+<script>
+    d3.csv("marksheet.csv").then(function) (data)
+    {
+        var canvas=d3.select("body").append("svg")
+        .attr('width',500 )
+        .attr('height',500)
+
+       canvas.selectAll("rect")
+       .data(data)
+       .enter()
+           .append("rect") 
+           .attr("width",function(d){return d.recovered})
+           .attr("height",48)
+           .attr("y",function(d,i){return i*50})
+           .attr("fill","green");
+
+        canvas.selectAll("text")
+        .data(data)
+        .enter()
+          .append("text")
+          .attr("fill","white")
+          .attr("y",function(d,i){
+            return i*50;
+          })
+          .text(function(d){return d.week})
+             
+    } 
+</script>
+
+
+
+   
 </div>
      
     
@@ -128,7 +168,7 @@
    </div>
 </div>
 </div>
-    <!--<div id="footer">
+     <div id="footer">
       <div id="newsletter">
            <div class="footbox">
         <h2>Image Gallery</h2>     
@@ -153,9 +193,9 @@
      
      
       <br class="clear" />
-    </div>-->
+    </div>
   
-  
+   
   
 
 </body>

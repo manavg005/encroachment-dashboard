@@ -1,9 +1,9 @@
-<!--?php
+<?php
 include 'connection.php';
 session_start();
 if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
     echo("<script>alert('You are already logged in. Please Loggout to create new profile.');
-    window.location.href='View.php';</script>
+     window.location.href='View.php';</script>
     ");
 }
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -71,7 +71,7 @@ $designation=$_POST['designation'];
             die("sorry we failed to connect: ". mysqli_connect_error());
         }
         else{
-            $sql_u = "SELECT * FROM user_tb WHERE username='$username'";
+            $sql_u = "SELECT * FROM userid_tb WHERE username='$username'";
             $res_u = mysqli_query($conn, $sql_u);
             if (mysqli_num_rows($res_u) > 0) {
                 echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -82,7 +82,7 @@ $designation=$_POST['designation'];
               else{
                 if(validUser()&&validEmail()&&validPhone()){
                 $hash = password_hash($password, PASSWORD_DEFAULT);
-                $sql = "INSERT INTO `user_tb` (`username`, `email`, `phonenumber`, `password`, `usertype`,`designation`) VALUES ('$username', '$email', '$phonenumber', '$hash', '$usertype','$designation');";
+                $sql = "INSERT INTO `userid_tb` (`username`, `email`, `phonenumber`, `password`, `usertype`,`designation`) VALUES ('$username', '$email', '$phonenumber', '$hash', '$usertype','$designation');";
                 $result = mysqli_query($conn,$sql);
                 if($result){
                     echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -93,9 +93,9 @@ $designation=$_POST['designation'];
                 }
               }
         }
-        header('location:Login.php');
+        header('location:login.php');
     }
-    ?>-->
+    ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -126,7 +126,7 @@ $designation=$_POST['designation'];
               <a href="login.html">Home</a>
             </li>
             <li class="last">
-                <a href="ContactUs.aspx">Contact Us</a>
+                <a href="#">Contact Us</a>
             </li>
         </ul>
         <br class="clear">
@@ -137,15 +137,15 @@ $designation=$_POST['designation'];
     </div> 
     <div class="jk">
     
-        <p>Jammu & Kashmir Revenue Department</p>
+        <p>Jammu & Kashmir Revenue Department </p>
         <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Government_of_Jammu_and_Kashmir.svg/
             640px-Government_of_Jammu_and_Kashmir.svg.png" alt="logo" width="128" height="120">-->
     </div>
         
     <div class="topbar2">
-    
+    <marquee behavior="" direction="" style="color: antiquewhite;">J&K Revenue Department Encroachment Drive</marquee>
     </div>
-<form>
+<form method="post">
             <div class="signup-form">
             
         <div class="form-title">
@@ -185,7 +185,7 @@ $designation=$_POST['designation'];
             <label for="select" id="s1">Role</label>
             <select class="form-select" name="select" id="select">
                 <option selected>Select your Role</option>
-                <option value="Admin">Super Admin</option>
+                <option value="Admin">Admin</option>
                 <option value="User">User</option>
               </select>
              </div>
@@ -204,7 +204,7 @@ $designation=$_POST['designation'];
           </div>
 </div>
 </form>
-><!--<div id="form-input">
+<!--<div id="form-input">
     <a href="Login.html">Already a User?</a>
 </div>-->
 
@@ -214,6 +214,45 @@ $designation=$_POST['designation'];
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="script.js"></script>-->
+    <div class="container common-container four_content carousel-container">
+        <div id="flexCarousel" class="flexslider carousel">
+           <ul class="slides">
+              <li><a target="_blank" href="http://digitalindia.gov.in/"
+                    title="Digital India, External Link that opens in a new window"><img
+                       src="images/digital.jpeg" alt="Digital India"></a></li>
+              <li><a target="_blank" href="http://www.makeinindia.com/"
+                    title="Make In India, External Link that opens in a new window"> <img
+                       src="Images/makeinindia.jpeg" alt="Make In India"></a></li>
+              
+              <li><a target="_blank" href="https://data.gov.in/"
+                    title="Data portal, External Link that opens in a new window"><img
+                       src="images/data.jpeg" alt="Data portal"></a></li>
+              <li><a target="_blank" href="https://mygov.in/"
+                    title="MyGov, External Link that opens in a new window"><img
+                       src="images/mygov.jpeg" alt="MyGov Portal"></a></li>
+           </ul>
+        </div>
+     </div>
+<div class="footer-bottom-wrapper">
+ <div class="footer-bottom-wrapper">
+    <div class="container common-container four_content footer-bottom-container">
+       <div class="footer-content">
+          <!-- <div class="copyright-content"> Website Content Managed by <strong>Department Name, Ministry Name,
+             </strong> -->
+             <span>Designed, Developed and Hosted by
+                <a target="_blank" title="JaKeGA, External Link that opens in a new window" href="https://jakega.jk.gov.in/">
+                   <strong>Jammu and Kashmir eGovernance Agency</strong>
+                </a>
+                <strong> ( JaKeGA )</strong>
+             </span>
+          </div>
+          <div class="last-updated">
+             <strong>Last Updated: 23-01-2023</strong>
+          </div>
+       </div>
+    </div>
+</div>
+
     
 </body>
 </html>
