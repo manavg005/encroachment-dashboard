@@ -18,7 +18,7 @@
               <a href="login.html">Home</a>
             </li>
             <li class="last">
-                <a href="ContactUs.aspx">Contact Us</a>
+                <a href="#">Contact Us</a>
             </li>
         </ul>
         <br class="clear">
